@@ -238,4 +238,40 @@ footer {
     color: white; /* Change text color on hover */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bigger shadow */
   }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
   
+    .skills-section {
+      grid-template-columns: 1fr; /* One column on small screens */
+    }
+  
+    .skill-card:hover {
+      transform: none; /* Disable hover scaling on touch devices */
+    }
+  
+    .container, section {
+      padding: 1rem;
+    }
+  
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .skill-card {
+    transition: transform 0.3s ease;
+  }
+  
+  @media (hover: hover) {
+    .skill-card:hover {
+      transform: scale(1.05);
+    }
+  }
